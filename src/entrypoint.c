@@ -24,7 +24,7 @@
  * */
 
 #define _AMD64_
-#include "wdm.h"
+#include <wdm.h>
 #include <ntdef.h>
 #include <sal.h>
 #include <ntddk.h>
