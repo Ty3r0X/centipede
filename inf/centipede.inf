@@ -1,0 +1,35 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample
+ClassGuid={9D1F38F2-C85E-11D1-9EB4-006008C3A19A}
+Provider=%ManufacturerName%
+DriverVer=07/31/2024,0.0.0.1
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx86,NTamd64
+
+[Standard.NTx86]
+%MyDriver.DeviceDesc%=MyDriver_Install, Root\MyDriverDevice
+
+[Standard.NTamd64]
+%MyDriver.DeviceDesc%=MyDriver_Install, Root\MyDriverDevice
+
+[MyDriver_Install]
+CopyFiles=MyDriver_CopyFiles
+
+[MyDriver_CopyFiles]
+MyDriver.sys
+
+[SourceDisksFiles]
+MyDriver.sys=1
+
+[SourceDisksNames]
+1=%DiskName%,,,
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[Strings]
+ManufacturerName="Chaox"
+DiskName="Centipede Installation Disk"
+MyDriver.DeviceDesc="Centipede - Kernel space capture utility"
